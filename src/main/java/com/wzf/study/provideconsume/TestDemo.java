@@ -1,6 +1,5 @@
 package com.wzf.study.provideconsume;
 
-import sun.misc.ProxyGenerator;
 
 /**
  * @author 王振方
