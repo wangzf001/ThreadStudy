@@ -18,7 +18,7 @@ public class TestDemo {
         t1.start();
         t2.start();
         t.start();
-
+//        t.join();
 
         Provider provider = new Provider(factory);
         Provider provider1 = new Provider(factory);
