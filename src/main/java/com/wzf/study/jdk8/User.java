@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
  * @date: 2023 03 16 16 28
  * @description:
  */
-//@Data
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {

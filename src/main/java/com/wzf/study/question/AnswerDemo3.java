@@ -31,8 +31,8 @@ public class AnswerDemo3 implements Callable<Integer> {
      * 有两个线程，需要轮训依次将1～10打印出来
      * Callable 实现
      * 两种方式
-     * new Thread(new FutureTask(new Callable(){})).start();
-     * Future f = executor.submit(new Callable(){})
+     * 第一种：new Thread(new FutureTask(new Callable(){})).start();
+     * 第二种：Future f = executor.submit(new Callable(){})
      * @param args
      */
     public static void main(String[] args) throws ExecutionException, InterruptedException {
@@ -47,6 +47,7 @@ public class AnswerDemo3 implements Callable<Integer> {
 
         /**
          * 线程池使用 Future
+         * submit方法
          */
         Future future =  Executors.newFixedThreadPool(2).submit(new Callable<Object>() {
             @Override
@@ -56,6 +57,9 @@ public class AnswerDemo3 implements Callable<Integer> {
         });
         future.get();
 
+        /**
+         * execute方法
+         */
         Executors.newFixedThreadPool(2).execute(()->{
 
         });
